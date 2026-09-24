@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tabiatdan foydalanish va ekologik muammolar — geografiya fani loyiha ishi">
+  <title>EcoVision — Geografiya Loyihasi</title>
+  <link rel="stylesheet" href="all.css">
+</head>
+
+<body class="project-body">
+
+  <!-- Interactive Falling Leaves Canvas -->
+  <canvas id="leafCanvas"></canvas>
+
+  <!-- Ambient Organic Glows -->
+  <div class="eco-glow eco-glow-1"></div>
+  <div class="eco-glow eco-glow-2"></div>
+  <div class="eco-glow eco-glow-3"></div>
+
+  <!-- Audio element for videos/eco.mp3 -->
+  <audio id="ecoAudio" src="videos/eco.mp3" preload="auto" loop></audio>
+
+  <!-- TOPBAR HEADER -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Menyuni ochish">☰</button>
+      <a class="brand-link" href="index.html">
+        <div class="brand-link-icon">E</div>
+        <span>Eco<span>Vision</span></span>
+      </a>
+    </div>
+
+    <div class="topbar-center">
+      GEOGRAFIYA • EKOLOGIYA LOYIHASI
+    </div>
+
+    <div class="topbar-right">
+      <button class="audio-player-btn" id="audioToggleBtn" title="Tabiat audio fon (eco.mp3)">
+        <div class="equalizer">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="audio-text">🎵 Ovozni Yoqish</span>
+      </button>
+
+      <a class="back-team-link" href="index.html">
+        <span>Jamoa</span>
+        <span>↗</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-menu-wrap">
+      <div class="sidebar-title">LOYIHA BO‘LIMLARI</div>
+      <nav class="nav-links-list">
+        <button class="side-nav-btn active" data-target="card-1">
+          <span class="nav-idx">01</span>
+          <span>Tabiatdan foydalanish</span>
+        </button>
+
+        <button class="side-nav-btn" data-target="card-2">
+          <span class="nav-idx">02</span>
+          <span>Oqilona foydalanish</span>
+        </button>
+
+        <button class="side-nav-btn" data-target="card-3">
+          <span class="nav-idx">03</span>
+          <span>Nooqilona foydalanish</span>
+        </button>
+
+        <button class="side-nav-btn" data-target="card-4">
+          <span class="nav-idx">04</span>
+          <span>Ekologik muammolar</span>
+        </button>
+
+        <button class="side-nav-btn" data-target="card-5">
+          <span class="nav-idx">05</span>
+          <span>Ekologik siyosat</span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="sidebar-badge-card">
+      <div class="badge-icon">🌿</div>
+      <p>
+        Tabiatni asrash — <br>
+        <strong>kelajak poydevorini qurishdir.</strong>
+      </p>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="content-area">
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+      <div class="hero-text-col">
+        <div class="hero-subtitle">
+          <span>✦</span> GEOGRAFIYA FANIDAN MAXSUS TAQDIMOT
+        </div>
+        <h1 class="hero-title">
+          Tabiat va<br>
+          <span>Ekologiya</span>
+        </h1>
+        <p class="hero-desc">
+          Tabiiy resurslardan foydalanish jarayonlari, global va mintaqaviy ekologik inqirozlar hamda barqaror rivojlanish strategiyalariga bag‘ishlangan 5 ta asosiy ilmiy bo‘lim.
+        </p>
+      </div>
+
+      <div class="hero-earth-globe">
+        <div class="earth-video-wrap">
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="videos/yer.mp4" type="video/mp4">
+            <source src="yer.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="earth-overlay"></div>
+        <div class="earth-badge-content">
+          <span class="earth-pulse"></span>
+          <span class="earth-label">🌍 YER SAYYORASI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPIC CARDS LIST -->
+    <section class="cards-container" id="cards">
+
+      <!-- ================= CARD 1 ================= -->
+      <article class="topic-card card-1" id="card-1">
+        <div class="card-video-wrap">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="videos/video1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-fallback-bg"></div>
+        <div class="card-dark-gradient"></div>
+
+        <div class="card-inner">
+          <div class="card-header-meta">
+            <div class="meta-tags">
+              <span class="tag-badge">TABIIY RESURSLAR</span>
+              <span class="speaker-badge">Kirish & Asosiy tushunchalar</span>
+            </div>
+            <div class="card-big-number">01</div>
+          </div>
+
+          <h2 class="card-title">1. Tabiatdan foydalanish</h2>
+          <p class="card-desc">
+            Tabiatdan foydalanish — bu insoniyatning yashashi va iqtisodiy rivojlanishi uchun tabiiy resurslarni oʻzlashtirishi, qayta ishlashi hamda atrof-muhitga ta'sir koʻrsatish jarayonidir. U ikki asosiy turga boʻlinadi: <strong>resursli</strong> (material va energiya olish) hamda <strong>resursli boʻlmagan</strong> (rekreatsiya, ilmiy-tadqiqot, hududiy joylashuv).
+          </p>
+
+          <div class="metrics-row">
+            <div class="metric-pill">
+              <div class="metric-val">100+ mlrd t</div>
+              <div class="metric-txt">Global yillik resurs iste'moli (so‘nggi 50 yilda 3 barobarga oshdi)</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">77%</div>
+              <div class="metric-txt">Qazib olinadigan yoqilg‘ilar (ko‘mir, neft, gaz) hissasiga to‘g‘ri keladi</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">70%</div>
+              <div class="metric-txt">Chuchuk suv zaxirasi qishloq xo‘jaligi ehtiyojlariga sarflanadi</div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn-open-modal" data-modal="modal1">
+              <span>Batafsil ma'lumot</span>
+              <span>↗</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= CARD 2 ================= -->
+      <article class="topic-card card-2" id="card-2">
+        <div class="card-video-wrap">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="videos/video2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-fallback-bg"></div>
+        <div class="card-dark-gradient"></div>
+
+        <div class="card-inner">
+          <div class="card-header-meta">
+            <div class="meta-tags">
+              <span class="tag-badge">BARQAROR RIVOJLANISH</span>
+              <span class="speaker-badge">Ma'ruzachi: <span>Jovlon</span></span>
+            </div>
+            <div class="card-big-number">02</div>
+          </div>
+
+          <h2 class="card-title">2. Tabiatdan oqilona foydalanish</h2>
+          <p class="card-desc">
+            Tabiatdan oqilona foydalanish — bu resurslarni minimal isrofgarchilik bilan ishlatish, ekotizimlarning oʻz-oʻzini tiklash imkoniyatini saqlash va atrof-muhitga zararni nolga yaqinlashtirish tamoyiliga asoslangan yondashuvdir.
+          </p>
+
+          <div class="metrics-row">
+            <div class="metric-pill">
+              <div class="metric-val">65–80%</div>
+              <div class="metric-txt">Aylana iqtisodiyotda chiqindilarni qayta ishlash ko‘rsatkichi</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">40–50%</div>
+              <div class="metric-txt">Tomchilatib sug‘orish orqali suv tejalishi va hosildorlik ortishi</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">10 mlrd t</div>
+              <div class="metric-txt">Muqobil energiya orqali atmosferaga tejaladigan yillik CO₂</div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn-open-modal" data-modal="modal2">
+              <span>Batafsil ma'lumot</span>
+              <span>↗</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= CARD 3 ================= -->
+      <article class="topic-card card-3" id="card-3">
+        <div class="card-video-wrap">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="videos/video3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-fallback-bg"></div>
+        <div class="card-dark-gradient"></div>
+
+        <div class="card-inner">
+          <div class="card-header-meta">
+            <div class="meta-tags">
+              <span class="tag-badge">EKOLOGIK INQIROZ</span>
+              <span class="speaker-badge">Fojiali faktlar & Tahlil</span>
+            </div>
+            <div class="card-big-number">03</div>
+          </div>
+
+          <h2 class="card-title">3. Tabiatdan nooqilona foydalanish</h2>
+          <p class="card-desc">
+            Tabiatdan nooqilona foydalanish — bu resurslarni cheksiz va nazoratsiz oʻzlashtirish, ekologik sigʻimni hisobga olmaslik va tabiatning balansini buzishdir. U resurslarning butkul tugashiga va atrof-muhit degradatsiyasiga olib keladi.
+          </p>
+
+          <div class="metrics-row">
+            <div class="metric-pill">
+              <div class="metric-val">10 mln ga</div>
+              <div class="metric-txt">Yiliga dunyo bo‘yicha kesib yo‘q qilinadigan o‘rmonlar maydoni</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">33%</div>
+              <div class="metric-txt">Yerdagi degradatsiyaga uchragan unumdor tuproq qatlami</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">~50 yil</div>
+              <div class="metric-txt">Mavjud neft va gaz zaxiralarining taxminiy tugash muddati</div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn-open-modal" data-modal="modal3">
+              <span>Batafsil ma'lumot</span>
+              <span>↗</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= CARD 4 ================= -->
+      <article class="topic-card card-4" id="card-4">
+        <div class="card-video-wrap">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="videos/video4.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-fallback-bg"></div>
+        <div class="card-dark-gradient"></div>
+
+        <div class="card-inner">
+          <div class="card-header-meta">
+            <div class="meta-tags">
+              <span class="tag-badge">GLOBAL MUAMMOLAR</span>
+              <span class="speaker-badge">Ma'ruzachi: <span>Lobar</span></span>
+            </div>
+            <div class="card-big-number">04</div>
+          </div>
+
+          <h2 class="card-title">4. Ekologik muammolar</h2>
+          <p class="card-desc">
+            Ekologik muammolar — insonning tabiatga nooqilona ta'siri natijasida biosferada yuzaga keladigan va insoniyat hayotiga bevosita xavf soladigan salbiy oʻzgarishlardir.
+          </p>
+
+          <div class="metrics-row">
+            <div class="metric-pill">
+              <div class="metric-val">425 ppm</div>
+              <div class="metric-txt">2024-yilda CO₂ miqdori (harorat +1.1°C ga ko‘tarildi)</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">90%</div>
+              <div class="metric-txt">Orol dengizi suv hajmining qurib yo‘qolish darajasi</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">-69%</div>
+              <div class="metric-txt">WWF bo‘yicha yovvoyi fauna populyatsiyasining kamayishi</div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn-open-modal" data-modal="modal4">
+              <span>Batafsil ma'lumot</span>
+              <span>↗</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= CARD 5 ================= -->
+      <article class="topic-card card-5" id="card-5">
+        <div class="card-video-wrap">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="videos/video5.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-fallback-bg"></div>
+        <div class="card-dark-gradient"></div>
+
+        <div class="card-inner">
+          <div class="card-header-meta">
+            <div class="meta-tags">
+              <span class="tag-badge">EKOLOGIK SIYOSAT</span>
+              <span class="speaker-badge">Ma'ruzachi: <span>Muxtabarxon</span></span>
+            </div>
+            <div class="card-big-number">05</div>
+          </div>
+
+          <h2 class="card-title">5. Ekologik siyosat</h2>
+          <p class="card-desc">
+            Ekologik siyosat — bu atrof-muhitni muhofaza qilish, resurslardan oqilona foydalanish va ekologik xavfsizlikni ta'minlashga qaratilgan huquqiy, iqtisodiy va tashkiliy chora-tadbirlar majmuidir.
+          </p>
+
+          <div class="metrics-row">
+            <div class="metric-pill">
+              <div class="metric-val">1.5°C</div>
+              <div class="metric-txt">Parij iqlim bitimi bo‘yicha global isish chegarasi (195 davlat)</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">30–90$</div>
+              <div class="metric-txt">1 tonna CO₂ chiqindisi uchun joriy etilgan uglerod solig‘i</div>
+            </div>
+
+            <div class="metric-pill">
+              <div class="metric-val">200 mln</div>
+              <div class="metric-txt">O‘zbekiston «Yashil makon» loyihasida yillik ekiladigan daraxtlar</div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn-open-modal" data-modal="modal5">
+              <span>Batafsil ma'lumot</span>
+              <span>↗</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- CONCLUSION SECTION -->
+    <section class="conclusion-box">
+      <div class="conclusion-title-wrap">
+        <span class="tag-badge">UMUMIY XULOSA</span>
+        <h2>
+          Tabiat — bizning<br>
+          <span>umumiy uyimiz.</span>
+        </h2>
+      </div>
+
+      <p class="conclusion-desc">
+        Tabiiy boyliklardan oqilona foydalanish, zamonaviy chiqindisiz texnologiyalarni joriy etish, qayta tiklanuvchi energiya manbalaridan foydalanish va ekologik mas'uliyatni oshirish — insoniyatning kelajagi va farovonligi uchun hal qiluvchi ahamiyatga ega.
+      </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        © 2026 EcoVision • Geografiya fani bo‘yicha taqdimot loyihasi
+      </div>
+      <div class="footer-members">
+        Rajabov Javlon • Baxodirova Muxtabarxon • Espolatov Ibrohim • Ramazonova Charos • Raxmonjonova Lobar
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ===================================================
+       MODAL DIALOGS (Detailed Information)
+  =================================================== -->
+
+  <!-- MODAL 1 -->
+  <div class="modal" id="modal1">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Yopish">×</button>
+      <div class="modal-top-meta">
+        <span class="modal-num">01 / 05-BO‘LIM</span>
+        <span class="tag-badge">TABIIY RESURSLAR</span>
+      </div>
+      <h2>Tabiatdan foydalanish</h2>
+      <p class="modal-lead">
+        Tabiatdan foydalanish — bu insoniyatning yashashi va iqtisodiy rivojlanishi uchun tabiiy resurslarni oʻzlashtirishi, qayta ishlashi hamda atrof-muhitga ta'sir koʻrsatish jarayonidir.
+      </p>
+
+      <div class="modal-details-grid">
+        <div class="modal-info-card">
+          <h4>🔹 Resursli va Resursli bo‘lmagan turlar</h4>
+          <p>
+            <strong>Resursli foydalanish:</strong> Material va energiya olish (konchilik, o‘rmonchilik, dehqonchilik, suv resurslari).<br>
+            <strong>Resursli bo‘lmagan foydalanish:</strong> Rekreatsiya (dam olish, turizm), ilmiy-tadqiqot va hududiy joylashuv manfaatlari.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>📊 Global Resurs Iste'moli (UNEP tahlili)</h4>
+          <p>
+            BMT (UNEP) ma'lumotlariga koʻra, soʻnggi 50 yilda global resurs iste'moli 3 barobarga oshdi — 1970-yildagi 30 milliard tonnadan 2024-yilga kelib 100 milliard tonnadan ortiqqa yetdi.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>⚡ Energetika va Suv Balansi</h4>
+          <p>
+            Dunyo boʻyicha ishlab chiqarilayotgan energiyaning 77% dan ortigʻi qazib olinadigan yoqilgʻilar (koʻmir, neft, tabiiy gaz) hisobiga toʻgʻri keladi. Chuchuk suvning 70% i qishloq xoʻjaligida, 20% i sanoatda va faqat 10% i maishiy ehtiyojlar uchun ishlatiladi.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>🇺🇿 O‘zbekiston miqyosida</h4>
+          <p>
+            Mamlakatimizda tabiiy resurslardan foydalanishning asosiy ulushi togʻ-kon sanoati (Olmaliq, Navoiy kon-metallurgiya kombinatlari) hamda sugʻoriladigan dehqonchilikka toʻgʻri keladi. Yillik suv iste'molimiz qariyb 40-45 milliard kub metrni tashkil etadi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2 -->
+  <div class="modal" id="modal2">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Yopish">×</button>
+      <div class="modal-top-meta">
+        <span class="modal-num">02 / 05-BO‘LIM</span>
+        <span class="speaker-badge">Ma'ruzachi: <span>Jovlon</span></span>
+      </div>
+      <h2>Tabiatdan oqilona foydalanish</h2>
+      <p class="modal-lead">
+        Tabiatdan oqilona foydalanish — bu resurslarni minimal isrofgarchilik bilan ishlatish, ekotizimlarning oʻz-oʻzini tiklash imkoniyatini saqlash va atrof-muhitga zararni nolga yaqinlashtirish tamoyiliga asoslangan yondashuvdir.
+      </p>
+
+      <div class="modal-details-grid">
+        <div class="modal-info-card">
+          <h4>♻️ Aylana iqtisodiyot (Circular Economy)</h4>
+          <p>
+            Germaniya va Yaponiya kabi ilg‘or davlatlarda chiqindilarning 65-80% i qayta ishlanadi (recycle). Plastik, shisha va metallni qayta ishlash xomashyo qazib olishga qaraganda energiyani 70-95% gacha tejaydi.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>💧 Tomchilatib sugʻorish texnologiyasi</h4>
+          <p>
+            An'anaviy ariqdan sugʻorishga qaraganda tomchilatib sugʻorish texnologiyasi suvni 40-50% tejaydi va hosildorlikni 30% ga oshiradi. Oʻzbekistonda 2026-yilgacha suv tejovchi texnologiyalar maydoni 1 million gektardan oshirildi.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>☀️ Muqobil va Yashil Energiya</h4>
+          <p>
+            Quyosh va shamol energiyasi har yili atmosferaga 10 milliard tonnadan ortiq CO₂ chiqishining oldini oladi. Oʻzbekistonda Navoiy va Samarqandda har biri 200 MVt quvvatga ega yirik quyosh fotoelektr stansiyalari muvaffaqiyatli ishga tushirilgan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3 -->
+  <div class="modal" id="modal3">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Yopish">×</button>
+      <div class="modal-top-meta">
+        <span class="modal-num">03 / 05-BO‘LIM</span>
+        <span class="tag-badge">EKOLOGIK INQIROZ</span>
+      </div>
+      <h2>Tabiatdan nooqilona foydalanish</h2>
+      <p class="modal-lead">
+        Tabiatdan nooqilona foydalanish — bu resurslarni cheksiz va nazoratsiz oʻzlashtirish, ekologik sigʻimni hisobga olmaslik va tabiatning balansini buzishdir. U resurslarning tugashiga va atrof-muhit degradatsiyasiga olib keladi.
+      </p>
+
+      <div class="modal-details-grid">
+        <div class="modal-info-card">
+          <h4>🌲 Oʻrmonlarning yoʻqolishi (Deforestation)</h4>
+          <p>
+            Har yili dunyo boʻyicha 10 million gektar oʻrmon (Daniya hududiga teng) kesib tashlanadi. Amazonka oʻrmonlarining 17% dan ortigʻi soʻnggi 50 yilda butkul yoʻq qilindi.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>🌾 Tuproq eroziyasi va degradatsiya</h4>
+          <p>
+            Notoʻgʻri agrotexnika va kimyoviy oʻgʻitlarni oshiqcha ishlatish sababli Yerdagi unumdor tuproqning 33% i degradatsiyaga uchragan. Har yili 24 milliard tonna unumdor tuproq qatlami yoʻqolmoqda.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>⏳ Tugayotgan qazilma boyliklar</h4>
+          <p>
+            Dunyodagi aniqlangan neft zaxiralari joriy iste'mol tempi saqlansa taxminan 50 yilga, tabiiy gaz 52 yilga, koʻmir esa 130 yilga yetishi prognoz qilinmoqda.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4 -->
+  <div class="modal" id="modal4">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Yopish">×</button>
+      <div class="modal-top-meta">
+        <span class="modal-num">04 / 05-BO‘LIM</span>
+        <span class="speaker-badge">Ma'ruzachi: <span>Lobar</span></span>
+      </div>
+      <h2>Ekologik muammolar</h2>
+      <p class="modal-lead">
+        Ekologik muammolar — insonning tabiatga nooqilona ta'siri natijasida biosferada yuzaga keladigan va insoniyat hayotiga bevosita xavf soladigan salbiy oʻzgarishlardir.
+      </p>
+
+      <div class="modal-details-grid">
+        <div class="modal-info-card">
+          <h4>🏭 Atmosferaning ifloslanishi va iqlim oʻzgarishi</h4>
+          <p>
+            Havodagi karbonat angidrid (CO₂) konsentratsiyasi sanoatgacha boʻlgan davrdagi 280 ppm dan 425 ppm (2024-yil) ga koʻtarildi. Bu Yerdagi oʻrtacha haroratning 1,1°C ga oshishiga olib keldi. JSST (WHO) ma'lumotiga koʻra, har yili 7 million inson havoning ifloslanishidan vafot etadi.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>🌊 Orol dengizi fojiasi</h4>
+          <p>
+            XX asrning 60-yillaridan buyon Orol dengizi hajmi 90% ga kamaydi, suv sathi 29 metrga pasaydi. Qurigan tubidan (Orolqum) har yili atmosferaga 75 million tonna tuz, chang va zaharli moddalar koʻtariladi.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>🦅 Biologik xilma-xillik inqirozi</h4>
+          <p>
+            WWF (Butunjahon yovvoyi tabiat jamgʻarmasi) hisobotiga koʻra, 1970-yildan beri yovvoyi hayvonlar va qushlar populyatsiyasi 69% ga kamaydi. Ko‘plab turlar yo‘qolib ketish arafasida.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5 -->
+  <div class="modal" id="modal5">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Yopish">×</button>
+      <div class="modal-top-meta">
+        <span class="modal-num">05 / 05-BO‘LIM</span>
+        <span class="speaker-badge">Ma'ruzachi: <span>Muxtabarxon</span></span>
+      </div>
+      <h2>Ekologik siyosat</h2>
+      <p class="modal-lead">
+        Ekologik siyosat — bu atrof-muhitni muhofaza qilish, resurslardan oqilona foydalanish va ekologik xavfsizlikni ta'minlashga qaratilgan huquqiy, iqtisodiy va tashkiliy chora-tadbirlar majmuidir.
+      </p>
+
+      <div class="modal-details-grid">
+        <div class="modal-info-card">
+          <h4>🌍 Xalqaro shartnomalar va protokollar</h4>
+          <p>
+            <strong>Parij iqlim bitimi (2015):</strong> Global isishni 1.5°C darajada ushlab turishni maqsad qilgan (195 ta davlat imzolagan).<br>
+            <strong>Monreal va Kioto protokollari:</strong> Ozon qatlamini yemiruvchi gazlarni man etish boʻyicha, natijada ozon teshigi tiklana boshladi.
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>💰 Iqtisodiy dastak (Uglerod soligʻi — Carbon Tax)</h4>
+          <p>
+            Yevropa Ittifoqi va boshqa 40 dan ortiq davlatda atmosferaga CO₂ chiqarish uchun uglerod soligʻi joriy etilgan (1 tonna CO₂ uchun 30 dan 90 dollargacha).
+          </p>
+        </div>
+
+        <div class="modal-info-card">
+          <h4>🌳 Oʻzbekiston: «Yashil makon» loyihasi va Qonunchilik</h4>
+          <p>
+            <strong>«Yashil makon» umummilliy loyihasi:</strong> Yiliga 200 million tup daraxt va buta ekish orqali shaharlar va hududlarni yashillashtirish.<br>
+            <strong>Qonunchilik:</strong> Oʻzbekiston Respublikasining "Tabiatni muhofaza qilish toʻgʻrisida"gi va "Chiqindilar toʻgʻrisida"gi qonunlari hamda Ekologiya, atrof-muhitni muhofaza qilish va iqlim oʻzgarishi vazirligi faoliyati.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="animation.js"></script>
+</body>
+</html>
